@@ -60,7 +60,7 @@
 <span class="sd">        operations: list of Operations of type op_base</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">=</span> <span class="n">operations</span>
@@ -83,7 +83,7 @@
 <span class="sd">            column of interest in the data</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        is_valid: True/False if problem is valid</span>
 <span class="sd">        filter_column_order_of_types: a list containing the types expected in the</span>
 <span class="sd">            sequence of operations on the filter column</span>
@@ -126,7 +126,7 @@
 <span class="sd">            to be set on the operations</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">op</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">operations</span><span class="p">):</span>
@@ -149,7 +149,7 @@
 <span class="sd">            the column containing entities in the data</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        hyper_parameters: list of hyper parameter settings</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Performing generate_and_set_hyper_parameters...&quot;</span><span class="p">)</span>
@@ -207,7 +207,7 @@
 <span class="sd">            in the sequence of operations on the label generating column</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        pre_label_cutoff_time_execution_result: label for training time segment</span>
 <span class="sd">        all_data_execution_result: label for testing (all time) time segment</span>
 
@@ -280,7 +280,7 @@
 <span class="sd">        None</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        description: natural language description</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -301,7 +301,7 @@
 <span class="sd">        None</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        json: JSON representation of the Prediction Problem.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -313,7 +313,8 @@
              <span class="s2">&quot;label_generating_column_order_of_types&quot;</span><span class="p">:</span>
              <span class="bp">self</span><span class="o">.</span><span class="n">label_generating_column_order_of_types</span><span class="p">})</span></div>
 
-<div class="viewcode-block" id="PredictionProblem.from_json"><a class="viewcode-back" href="../../../trane.core.html#trane.core.prediction_problem.PredictionProblem.from_json">[docs]</a>    <span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span><span class="n">json_data</span><span class="p">):</span>
+<div class="viewcode-block" id="PredictionProblem.from_json"><a class="viewcode-back" href="../../../trane.core.html#trane.core.prediction_problem.PredictionProblem.from_json">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">json_data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This function converts a JSON snippet</span>
 <span class="sd">        to a prediction problem</span>
@@ -323,7 +324,7 @@
 <span class="sd">        json_data: JSON code containing the prediction problem.</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        problem: Prediction Problem</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>
@@ -432,7 +433,7 @@
 <span class="sd">        rows, randomly select this many rows to use as the dataframe</span>
 
 <span class="sd">    Returns</span>
-<span class="sd">    ----------</span>
+<span class="sd">    -------</span>
 <span class="sd">    best_parameter_value: parameter setting for the operation.</span>
 <span class="sd">    best_df: the dataframe (possibly filtered depending on</span>
 <span class="sd">        num_rows_to_execute_on)</span>

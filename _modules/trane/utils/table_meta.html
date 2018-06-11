@@ -73,7 +73,7 @@
 <span class="sd">        table_meta: a dict describe meta data of a database.</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">table_meta</span> <span class="o">=</span> <span class="n">table_meta</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -96,7 +96,7 @@
 <span class="sd">        column_name: the column</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        type: the type of the data in the column</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_columns</span><span class="p">[</span><span class="n">column_name</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span></div>
@@ -111,7 +111,7 @@
 <span class="sd">        dtype: the data type to change the column to</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">all_columns</span><span class="p">[</span><span class="n">column_name</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dtype</span>
@@ -144,7 +144,7 @@
 <span class="sd">        property_name: the property wanted</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        propery: the property</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_columns</span><span class="p">[</span><span class="n">column_name</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="n">property_name</span><span class="p">]</span></div>
@@ -158,7 +158,7 @@
 <span class="sd">        None</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        names: all the column names</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_columns</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span></div>
@@ -172,7 +172,7 @@
 <span class="sd">        None</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        copy: a deep copy of self</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
@@ -186,13 +186,14 @@
 <span class="sd">        None</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        str: JSON str of self</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table_meta</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TableMeta.from_json"><a class="viewcode-back" href="../../../trane.utils.html#trane.utils.table_meta.TableMeta.from_json">[docs]</a>    <span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span><span class="n">json_data</span><span class="p">):</span>
+<div class="viewcode-block" id="TableMeta.from_json"><a class="viewcode-back" href="../../../trane.utils.html#trane.utils.table_meta.TableMeta.from_json">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">json_data</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Load from json str.</span>
 
@@ -201,7 +202,7 @@
 <span class="sd">        json_data: JSON str</span>
 
 <span class="sd">        Returns</span>
-<span class="sd">        ----------</span>
+<span class="sd">        -------</span>
 <span class="sd">        table_meta: a TableMeta object</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
